@@ -26,7 +26,8 @@
       ]
     },
     "esModuleInterop": true,
-    "resolveJsonModule": true,z    "lib": [
+    "resolveJsonModule": true,
+    "lib": [
       "dom",
       "dom.iterable",
       "esnext"
