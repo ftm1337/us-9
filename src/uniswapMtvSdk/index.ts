@@ -2,8 +2,8 @@ import JSBI from 'jsbi'
 export { JSBI }
 
 export {
-  BigintIsh,
   ChainId,
+  BigintIsh,
   TradeType,
   Rounding,
   FACTORY_ADDRESS,
