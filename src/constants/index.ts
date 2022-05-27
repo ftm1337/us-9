@@ -45,7 +45,7 @@ export const UNI: { [chainId in ChainId]: Token } = {
   [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.KOVAN]: new Token(ChainId.KOVAN, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   //62621
-  [ChainId.LOCAL]: new Token(ChainId.MULTIVAC, UNI_ADDRESS, 18, 'HTZ', 'Hertz'),
+  //[ChainId.LOCAL]: new Token(ChainId.LOCAL, UNI_ADDRESS, 18, 'HTZ', 'Hertz'),
   [ChainId.MULTIVAC]: new Token(ChainId.MULTIVAC, UNI_ADDRESS, 18, 'HTZ', 'Hertz')
 }
 
@@ -62,7 +62,7 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
   [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
   //62621
-  [ChainId.LOCAL]: [WETH[ChainId.LOCAL]],
+  //[ChainId.LOCAL]: [WETH[ChainId.LOCAL]],
   [ChainId.MULTIVAC]: [WETH[ChainId.MULTIVAC]]
 }
 

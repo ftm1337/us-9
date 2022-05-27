@@ -17,7 +17,7 @@ export class Currency {
    * The only instance of the base class `Currency`.
    */
   public static readonly ETHER: Currency = new Currency(18, 'ETH', 'Ether')
-  public static readonly EXPANSE: Currency = new Currency(18, 'EXP', 'Expanse')
+  //public static readonly EXPANSE: Currency = new Currency(18, 'EXP', 'Expanse')
 
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
@@ -35,19 +35,19 @@ export class Currency {
 }
 
 const ETHER = Currency.ETHER
-const EXPANSE = Currency.EXPANSE
+//const EXPANSE = Currency.EXPANSE
 
 
 export const BASE = {
   [ChainId.MAINNET]: ETHER,
-  [ChainId.EXPANSE]: EXPANSE,
+  //[ChainId.EXPANSE]: EXPANSE,
   [ChainId.ROPSTEN]: ETHER,
   [ChainId.RINKEBY]: ETHER,
   [ChainId.GÖRLI]: ETHER,
   [ChainId.KOVAN]: ETHER,
-  [ChainId.LOCAL]: ETHER,
+  //[ChainId.LOCAL]: ETHER,
   [ChainId.MULTIVAC]: ETHER
 
 }
 
-export { ETHER, EXPANSE }
+export { ETHER } //, EXPANSE }
