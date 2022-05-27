@@ -3,13 +3,14 @@ export { JSBI }
 
 export {
   ChainId,
-  BigintIsh,
   TradeType,
   Rounding,
   FACTORY_ADDRESS,
   INIT_CODE_HASH,
   MINIMUM_LIQUIDITY
 } from './constants'
+
+export type BigintIsh = JSBI | bigint | string
 
 export * from './errors'
 export * from './entities'
