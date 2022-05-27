@@ -78,9 +78,9 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
  * tokens.
  */
 export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: Token[] } } = {
-  [ChainId.MAINNET]: {
-    [AMPL.address]: [DAI, WETH[ChainId.MAINNET]]
-  }
+  //[ChainId.MAINNET]: {
+  //  [AMPL.address]: [DAI, WETH[ChainId.MAINNET]]
+  //}
 }
 
 // used for display in the default list when adding liquidity
