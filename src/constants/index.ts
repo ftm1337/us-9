@@ -26,7 +26,7 @@ type ChainTokenList = {
 //export const AMPL = new Token(ChainId.MAINNET, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 9, 'AMPL', 'Ampleforth')
 //export const WBTC = new Token(ChainId.MAINNET, '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', 18, 'WBTC', 'Wrapped BTC')
 //62621
-export const USDC = new Token(ChainId.MULTIVAC, '0xEa1199d50Ee09fA8062fd9dA3D55C6F90C1bABd2', 6, 'USDC', 'Circle USD')
+export const USDC = new Token(ChainId.MULTIVAC, '0xEa1199d50Ee09fA8062fd9dA3D55C6F90C1bABd2', 6, 'USDC', 'Circle USD'),
 export const HTZ = new Token(ChainId.MULTIVAC, '0xFC0c8D38166fc417F19De5B44CfC339079a70913', 18, 'HTZ', 'Hertz')
 //export const UNI = new Token(ChainId.MULTIVAC, '0xFC0c8D38166fc417F19De5B44CfC339079a70913', 18, 'HTZ', 'Hertz')
 
