@@ -92,7 +92,7 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
   //MAINNET
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT]
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT],
   //62621
   [ChainId.MULTIVAC]: [...WETH_ONLY[ChainId.MULTIVAC], USDC, HTZ]
 
@@ -102,7 +102,7 @@ export const SUGGESTED_BASES: ChainTokenList = {
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
   //MAINNET
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT]
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT],
   [ChainId.MULTIVAC]: [...WETH_ONLY[ChainId.MULTIVAC], USDC, HTZ]
 }
 
