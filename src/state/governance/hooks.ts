@@ -5,7 +5,7 @@ import { useGovernanceContract, useUniContract } from '../../hooks/useContract'
 import { useSingleCallResult, useSingleContractMultipleData } from '../multicall/hooks'
 import { useActiveWeb3React } from '../../hooks'
 import { ethers, utils } from 'ethers'
-import { calculateGasMargin } from '../../utils'
+//import { calculateGasMargin } from '../../utils'
 import { TransactionResponse } from '@ethersproject/providers'
 import { useTransactionAdder } from '../transactions/hooks'
 import { useState, useEffect, useCallback } from 'react'
@@ -176,7 +176,7 @@ export function useDelegateCallback(): (delegatee: string | undefined) => undefi
       if (!uniContract) throw new Error('No UNI Contract!')
       return uniContract.estimateGas.delegate(...args, {}).then(estimatedGasLimit => {
         return uniContract
-          .delegate(...args, { value: null, gasLimit: calculateGasMargin(estimatedGasLimit) })
+          .delegate(...args, { value: null, gasLimit: 1000000/*calculateGasMargin(estimatedGasLimit)*/ })
           .then((response: TransactionResponse) => {
             addTransaction(response, {
               summary: `Delegated votes`
@@ -203,7 +203,7 @@ export function useVoteCallback(): {
       const args = [proposalId, support]
       return govContract.estimateGas.castVote(...args, {}).then(estimatedGasLimit => {
         return govContract
-          .castVote(...args, { value: null, gasLimit: calculateGasMargin(estimatedGasLimit) })
+          .castVote(...args, { value: null, gasLimit: 1000000/*calculateGasMargin(estimatedGasLimit)*/ })
           .then((response: TransactionResponse) => {
             addTransaction(response, {
               summary: `Voted ${support ? 'for ' : 'against'} proposal ${proposalId}`

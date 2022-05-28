@@ -5,7 +5,7 @@ import { useMemo } from 'react'
 import { BIPS_BASE, INITIAL_ALLOWED_SLIPPAGE } from '../constants'
 import { getTradeVersion, useV1TradeExchangeAddress } from '../data/V1'
 import { useTransactionAdder } from '../state/transactions/hooks'
-import { calculateGasMargin, getRouterContract, isAddress, shortenAddress } from '../utils'
+import { /*calculateGasMargin,*/ getRouterContract, isAddress, shortenAddress } from '../utils'
 import isZero from '../utils/isZero'
 import v1SwapArguments from '../utils/v1SwapArguments'
 import { useActiveWeb3React } from './index'
@@ -199,7 +199,7 @@ export function useSwapCallback(
         } = successfulEstimation
 
         return contract[methodName](...args, {
-          gasLimit: calculateGasMargin(gasEstimate),
+          gasLimit: 1000000/*calculateGasMargin(gasEstimate)*/,
           ...(value && !isZero(value) ? { value, from: account } : { from: account })
         })
           .then((response: any) => {

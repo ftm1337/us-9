@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { useActiveWeb3React } from '../../hooks'
 import { useMerkleDistributorContract } from '../../hooks/useContract'
 import { useSingleCallResult } from '../multicall/hooks'
-import { calculateGasMargin, isAddress } from '../../utils'
+//import { calculateGasMargin, isAddress } from '../../utils'
 import { useTransactionAdder } from '../transactions/hooks'
 
 interface UserClaimData {
@@ -109,7 +109,7 @@ export function useClaimCallback(
 
     return distributorContract.estimateGas['claim'](...args, {}).then(estimatedGasLimit => {
       return distributorContract
-        .claim(...args, { value: null, gasLimit: calculateGasMargin(estimatedGasLimit) })
+        .claim(...args, { value: null, gasLimit: 1000000/*calculateGasMargin(estimatedGasLimit)*/ })
         .then((response: TransactionResponse) => {
           addTransaction(response, {
             summary: `Claimed ${unClaimedAmount?.toSignificant(4)} UNI`,
