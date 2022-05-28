@@ -82,9 +82,9 @@ export function useApproveCallback(
 
     return tokenContract
       .approve(spender, useExact ? amountToApprove.raw.toString() : MaxUint256, {
-        //This is broken somehow. Using 100k instead (hard-coded)
-        //gasLimit: calculateGasMargin(estimatedGas)
-        gasLimit: 100000
+        //This ~~is~~might be broken somehow. Use 100k instead (hard-coded)
+        gasLimit: calculateGasMargin(estimatedGas)
+        //gasLimit: 100000
       })
       .then((response: TransactionResponse) => {
         addTransaction(response, {
